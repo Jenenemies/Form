@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/reset.css" rel="stylesheet">
+    <link href="css/estilo.css" rel="stylesheet">
+
+    <title>Formulario-simple</title>
+</head>
+<body>
+    <form method="post">
+        <fieldset>
+            <legend class="datos">Datos de acceso</legend>
+            <ul>
+                <li class="titulo">
+                    <label for="usuario">Usuario</label>
+                    <input class="cuadro"  id="usuario" type="text" placeholder="Escribe el nombre de usuario"
+                    required tabindex="1">
+
+                </li>
+                <li class="titulo">
+                    <label for="pass">Pasword</label>
+                    <input  class="cuadro" id="pass" type="password" pattern="^(?=.*\d)(?=.*[A-Z])(?=.*[a-z])(?=.*[^\w\d\s:])([^\s]){8,16}$"
+                    placeholder="Escribe la contraseña" required tabindex="2">
+                    <small>Escribe entre 6 y 8 carácteres, 1 mayúscula, dos dígitos y un carácter especial: . , o ; </small>
+                    
+
+                </li>
+            </ul>
+                <label class="dades">Datos personales</label>
+                <ul>
+                    <li class="titulo">
+                        <label for="nom">Nombre</label>
+                        <input class="cuadro" id="nom" type="text" placeholder="Escribe tu nombre" required tabindex="3">
+                    </li>
+                    <li class="titulo">
+                        <label for="mail">E-mail</label>
+                        <input class="cuadro" id="mail" type="email"
+                        pattern="^((?!\.)[\w\-_.]*[^.])(@\w+)(\.\w+(\.\w+)?[^.\W])$" placeholder="Escribe el e-mail" 
+                        required  tabindex="4">
+
+                    </li>
+                </ul>
+              <label class="dades">Ciudad de preferencia</label>
+              <ul>
+                <li>
+                    <input id="madrid" type="radio" value="Madrid" name="Ciudad" required>
+                    <label for="madrid">Madrid</label>
+                </li>
+                <li>
+                <input id="bilbao" type="radio"
+                value="Bilbao" name="Ciudad" required>
+                <label for="bilbao">Bilbao</label>
+            </li>
+            <li>
+                <input id="san" type="radio" value="San Sebastián" name="Ciudad" required>
+                <label for="san">San Sebastián</label>
+            </li>
+              </ul>
+              <ul>
+                <li>
+              <label class="dades" for="cargo">Cargo</label>
+              <select id="cargo" tabindex="8" >
+                <optgroup label="Desarrolladores">
+                    <option value="Front-end" >Front-end </option>
+                    <option value="Back-end" >Back-end</option>
+                    <option value="Full-syack">Full-stack</option>
+                </optgroup>
+                <optgroup label="Diseñadores">
+                    <option value="UI Designer">UI Designer</option>
+                    <option value="UX Designer">UX Designer</option>
+                </optgroup>
+                
+              </select>
+
+
+             </li>
+            </ul>
+
+            <label class="dades">Adjuntar archivo</label>
+            <ul>
+                <li>
+                    <label for="pdf">Adjuntar CV</label>
+                    <input id="pdf" type="file" accept=".pdf" tabindex="9" >
+
+                </li>
+            </ul>
+
+
+            <fieldset>
+                <ul class="boton">
+                    <li>
+                        <Button class="borrar" type="reset" tabindex="8">BORRAR</Button>
+                    </li>
+                    <li>
+                        <button class="enviar" type="submit" tabindex="9">ENVIAR</button>
+                    </li>
+                </ul>
+            </fieldset>
+
+
+        </fieldset>
+
+
+
+    </form>
+</body>
+</html>
